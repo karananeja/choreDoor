@@ -1,7 +1,7 @@
 let doorImage1 = document.getElementById("door1");
 let doorImage2 = document.getElementById("door2");
 let doorImage3 = document.getElementById("door3");
-let startbutton = document.getElementById("start");
+let startButton = document.getElementById("start");
 let numClosedDoors = 3;
 let currentlyPlaying = true;
 let openDoor1, openDoor2, openDoor3;
@@ -81,13 +81,13 @@ const startRound = () => {
   doorImage1.src = closedDoorPath;
   doorImage2.src = closedDoorPath;
   doorImage3.src = closedDoorPath;
-  startbutton.innerHTML = 'Good luck!';
+  startButton.innerHTML = 'Good luck!';
   currentlyPlaying = true;
   randomChoreDoorGenerator();
 }
 
 startButton.onclick = () => {
-  if(currentlyPlaying === true){
+  if(!currentlyPlaying){
     startRound();
   }
 }
